@@ -1,25 +1,22 @@
 <template>
   <form @submit.prevent>
     <h4>Create Post</h4>
-    <input
+    <my-input
         v-model="post.title"
-        class="input"
-        type="text"
         placeholder="Title"
     />
-    <input
+    <my-input
         v-model="post.body"
-        class="input"
-        type="text"
         placeholder="Description"
 
     />
-    <button
+    <my-button
         class="btn"
         @click="createPost"
+        style="align-self: flex-end; margin-top: 15px"
     >
       Create
-    </button>
+    </my-button>
   </form>
 </template>
 
@@ -47,21 +44,6 @@
 </script>
 
 <style scoped>
-.input {
-  width: 100%;
-  border: 1px solid teal;
-  padding: 10px 15px;
-  margin-top: 15px;
-}
-.btn {
-  margin-top: 15px;
-  align-self: flex-end;
-  padding: 10px 15px;
-  background: none;
-  color: teal;
-  border: 1px solid teal;
-  cursor: pointer;
-}
 form {
   display: flex;
   flex-direction: column;
